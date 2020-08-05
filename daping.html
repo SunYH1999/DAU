@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>fullPage.js演示-自动滚动_dowebok</title>
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<style>
+			.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+</style>
+	</head>
+
+	<body>
+		<div id="dowebok">
+			<div class="section">
+				<!-- <input type="button" value="发送get_ajax请求" id='btnAjax1'> -->
+				<h1>昨日DAU 228</h1>
+			</div>
+			<!-- <div class="section">
+				<h1>实时DAU</h1>
+			</div> -->
+			<div class="section">
+				<!-- <input type="button" value="发送get_ajax请求" id='btnAjax2'> -->
+				<h1>累计注册用户数 294</h1>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script>
+			// function addScriptTag(src) {
+			//   var script = document.createElement('script');
+			//   script.setAttribute("type","text/javascript");
+			//   script.src = src;
+			//   document.body.appendChild(script);
+			// }
+
+			// window.onload = function () {
+			//   addScriptTag('http://op.funlink-tech.com/lq/master/roomdate');
+			// }
+
+			// function foo(data) {
+			//   console.log('response data: ' + JSON.stringify(data));
+			// };    
+
+			// 	foo({
+			// 	  "test": "testData"
+			// 	});     
+
+
+
+
+
+			// document.querySelector('#btnAjax1').onclick = function() {
+			// 	// 发送ajax 请求 需要 五步
+
+
+
+			// 	$.ajax({
+			// 		url: "http://op.funlink-tech.com/lq/master/roomdate",
+			// 		// contentType: 'application/json;charset=UTF-8',
+			// 		// type: 'POST',
+			// 		method: 'POST',
+			// 		// async: false,
+			// 		dataType: 'json',
+			// 		crossDomain: true,
+
+			// 		//timeout: 10000, // 超时时间 10 秒
+			// 		headers: {
+			// 			'Access-Control-Allow-Origin': '*',
+			// 			//'Content-Type':'application/json;charset=utf8',
+			// 		},
+			// 		data: JSON.stringify({
+			// 			"date": "20200803",
+			// 			"curPage": 1,
+			// 			"pageSize": 10
+			// 		}),
+
+
+			// 		success: function(data) {
+			// 			console.log(1111111111);
+			// 			document.querySelector('h1').innerHTML = "昨日DAU " + data.data.dayLive;
+						
+			// 		},
+			// 		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			// 			console.log(XMLHttpRequest.status);
+			// 			console.log(XMLHttpRequest.readyState);
+			// 			console.log(textStatus);
+			// 		},
+			// 		complete: function(XMLHttpRequest, status) { //请求完成后最终执行参数　
+			// 		}
+			// 	})
+				
+				
+				
+				
+			// }
+			
+			
+			// document.querySelector('#btnAjax2').onclick = function() {
+			// 	// 发送ajax 请求 需要 五步
+			
+			
+			
+			// 	$.ajax({
+			// 		url: "http://op.funlink-tech.com/op/user/invite_code_data",
+			// 		// contentType: 'application/json;charset=UTF-8',
+			// 		// type: 'POST',
+			// 		method: 'POST',
+			// 		async: false,
+			// 		dataType: 'json',
+			// 		crossDomain: true,
+			
+			// 		//timeout: 10000, // 超时时间 10 秒
+			// 		// headers: {
+			// 		// 	// 'Access-Control-Allow-Origin': '*',
+			// 		// 	'Content-Type':'application/json;charset=utf8',
+			// 		// },
+			// 		data: JSON.stringify({
+			// 			"type": 2,
+			// 			"curPage": 1,
+			// 			"pageSize": 1
+			// 		}),
+			
+			
+			// 		success: function(data) {
+			// 			console.log(1111111111);
+			// 			document.querySelector('h1').innerHTML = "昨日DAU " + data.data.dayLive;
+						
+			// 		},
+			// 		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			// 			console.log(XMLHttpRequest.status);
+			// 			console.log(XMLHttpRequest.readyState);
+			// 			console.log(textStatus);
+			// 		},
+			// 		complete: function(XMLHttpRequest, status) { //请求完成后最终执行参数　
+			// 		}
+			// 	})
+				
+				
+				
+				
+			// }
+
+
+
+
+
+
+			$(function() {
+				$('#dowebok').fullpage({
+					sectionsColor: ['#1bbc9b', '#7BAABE', '#4BBFC3','#f90'],
+					continuousVertical: true
+				});
+
+				setInterval(function() {
+					$.fn.fullpage.moveSectionDown();
+				}, 3000);
+			});
+		</script>
+
+
+		<!-- 统计 -->
+		<div style="display: none;">
+			<div style="display:none">
+				<!-- <script src="//s5.cnzz.com/z_stat.php?id=1253231826&web_id=1253231826"></script> -->
+			</div>
+		</div>
+
+	</body>
+</html>
